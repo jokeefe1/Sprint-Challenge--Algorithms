@@ -97,9 +97,8 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        work = True
         self.swap_item()
-        while work:
+        while True:
             while self.can_move_right():
                 self.move_right()
                 if self.compare_item() == 1:
@@ -111,8 +110,7 @@ class SortingRobot:
                 self.move_right()
                 self.swap_item()
             else:
-                work = False
-
+                break
 
 if __name__ == "__main__":
     # Test our your implementation from the command line
